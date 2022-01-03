@@ -75,3 +75,10 @@ header .icons a {
     border-radius: 50%;
     background: #eee;
 }
+
+header .icons i:hover,
+header .icons a:hover {
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
