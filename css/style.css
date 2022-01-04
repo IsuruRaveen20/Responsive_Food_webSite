@@ -25,6 +25,45 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+    background: #eee;
+}
+
+.sub-heading {
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -90,12 +129,15 @@ header .icons #menu-bars {
 
 /* media quries */
 
-@media(max-width:991px) {
+@media (max-width:991px) {
     html {
         font-size: 55%;
     }
     header {
-        padding: 1rem, 2rem;
+        padding: 1rem 2rem;
+    }
+    section {
+        padding: 2rem;
     }
 }
 
@@ -110,6 +152,25 @@ header .icons #menu-bars {
         right: 0;
         background: #fff;
         border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
         padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+    #search-form #search-box {
+        width: 90%;
+        margin: 0 1rem;
+    }
+    .home .home-slider .slide .content h3 {
+        font-size: 5rem;
     }
 }
